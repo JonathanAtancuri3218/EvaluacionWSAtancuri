@@ -26,7 +26,8 @@
     <name>EvaluacionWSAtancuri</name>
     <description>Insert description for your project here.</description>
 
-    <properties>
+  
+  <properties>
         <!-- Explicitly declaring the source encoding eliminates the following 
             message: -->
         <!-- [WARNING] Using platform encoding (UTF-8 actually) to copy filtered 
@@ -131,6 +132,16 @@
             <artifactId>jakarta.enterprise.cdi-api</artifactId>
             <scope>provided</scope>
         </dependency>
+  
+        
+        <dependency>
+         <groupId>com.sun.xml.ws</groupId>
+         <artifactId>jaxws-rt</artifactId>
+         <version>2.2.5</version>
+         <scope>compile</scope>
+      </dependency>
+        
+        
 
         <!-- Bean Validation Implementation 
            Provides portable constraints such as @Email 
@@ -140,6 +151,15 @@
             <artifactId>hibernate-validator</artifactId>
             <scope>provided</scope>
         </dependency>
+		        
+		        <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
+		<dependency>
+		    <groupId>javax.validation</groupId>
+		    <artifactId>validation-api</artifactId>
+		    <version>2.0.1.Final</version>
+		</dependency>
+        
+        
 
         <!-- Import the JPA API, we use provided scope as the API is included in WildFly / JBoss EAP -->
         <dependency>
@@ -315,9 +335,9 @@
                             </systemPropertyVariables>
                         </configuration>
                     </plugin>
+                    
                 </plugins>
             </build>
         </profile>
     </profiles>
-
 </project>
