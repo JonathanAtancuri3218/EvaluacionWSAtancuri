@@ -13,12 +13,13 @@ import ec.ups.edu.g1.modelo.Titulo;
 public class GestionTitulosON {
 	
 
-	@Stateless
-	public class gestionTitulos implements GestionTitulosLocal , GestionTitulosRemoto{
+@Stateless
+public class gestionTitulos implements GestionTitulosLocal , GestionTitulosRemoto{
 		@Inject
 		private PersonaDAO pdao;
 		
-		@Inject TituloDAO tdao;
+		@Inject 
+		TituloDAO tdao;
 
 		
 		public List<Persona> listarPersonas() throws Exception{

@@ -12,14 +12,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import modelos.Titulo;
-
-
-
 @Entity
 @Table(name="Personas")
 public class Persona implements Serializable {
-	
 	/**
 	 * 
 	 */
@@ -38,7 +33,7 @@ public class Persona implements Serializable {
 	@Column(nullable = false)
 	private String apellido;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="per_titulo")
 	private Titulo per_titulo;
 
@@ -74,20 +69,19 @@ public class Persona implements Serializable {
 		this.apellido = apellido;
 	}
 
-	public Titulo getTitulo() {
-		return titulo;
+	public Titulo getPer_titulo() {
+		return per_titulo;
 	}
 
-	public void setTitulo(Titulo titulo) {
-		this.titulo = titulo;
+	public void setPer_titulo(Titulo per_titulo) {
+		this.per_titulo = per_titulo;
 	}
 
 	@Override
 	public String toString() {
 		return "Persona [id=" + id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido
-				+ ", titulo=" + titulo + "]";
+				+ ", per_titulo=" + per_titulo + "]";
 	}
-
 	
-
+	
 }

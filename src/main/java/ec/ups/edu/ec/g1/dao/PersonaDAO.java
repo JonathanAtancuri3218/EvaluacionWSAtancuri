@@ -22,7 +22,7 @@ public class PersonaDAO {
 		try {
 			List<Persona> personas = em.createQuery("SELECT p FROM Persona p", Persona.class).getResultList();
 			for (Persona persona : personas) {
-				persona.setTitulo(null);
+				persona.setPer_titulo(null);
 			}
 			return personas;
 		} catch (Exception e) {

@@ -53,7 +53,7 @@ import ec.ups.edu.g1.negocio.GestionTitulosON;
 				titulo.setNombre(nombre);
 				titulo.setEstado(estado);
 				titulo.setRegistro(registro);
-				//titulo.setTit_registro(fecha);
+			
 				gestion.registrarTitulo(titulo);
 			} catch (Exception e) {
 				throw new Exception("Se ah producido un error"+e.getMessage());
